@@ -4,6 +4,9 @@ class ApplicationController < ActionController::Base
 	before_filter :set_cache_buster
 
 
+  #testing push to server
+
+
 	 protect_from_forgery
 
   # after login click back cannot show last page 
