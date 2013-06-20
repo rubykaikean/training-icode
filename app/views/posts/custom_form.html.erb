@@ -1,0 +1,71 @@
+<h1>custom form</h1>
+
+<%= form_tag(process_custom_data_posts_path) do  %>  
+<%# process_custom_data_posts_path << posts must have s  because it under member  %>
+	<%= label_tag(:q, "Search for:") %>
+  	<%= text_field_tag(:q) %>
+
+  	<!-- <%#= label_tag (:q , "search[jquery]") %> >> if all field under "search" put like that .. -->
+  	<br />
+  	<%= check_box_tag(:pet_dog) %>
+	<%= label_tag(:pet_dog, "I own a dog") %>
+	<%= check_box_tag(:pet_cat) %>
+	<%= label_tag(:pet_cat, "I own a cat") %>
+	<br />
+	<%= radio_button_tag(:age, "male child") %>
+	<%= label_tag(:age_male_child, "I am younger than 21") %>
+	<%= radio_button_tag(:age, "male adult") %>
+	<%= label_tag(:age_male_adult, "I'm over 21") %>
+
+	<%= radio_button_tag(:old_age, "female child") %>
+	<%= label_tag(:age_female_child, "I'm younger then 21 and i am female") %>
+	<%= radio_button_tag(:old_age, "female adult") %>
+	<%= label_tag(:age_female_adult, "I'm over 21 and i am female") %>
+	<br>
+	message
+	<%= text_area_tag(:message, "Hi, nice site", size: "24x6") %>
+	<br>
+	password
+	<%= password_field_tag(:password) %>
+	<br>
+	parent_id
+	<%= hidden_field_tag(:parent_id, "5") %>
+	<br>
+	user-name
+	<%= search_field(:user, :name) %>
+	<br>
+	user-phone
+	<%= telephone_field(:user, :phone) %>
+	<br>
+	user-born_on
+	<%= date_field(:user, :born_on) %>
+	<br>
+	user-meeting_time
+	<%= datetime_field(:user, :meeting_time) %>
+	<br>
+	user-graduation_day
+	<%= datetime_local_field(:user, :graduation_day) %>
+	<br>
+	user-birthday_month
+	<%= month_field(:user, :birthday_month) %>
+	<br>
+	user-birthday_week
+	<%= week_field(:user, :birthday_week) %>
+	<br>
+	user-homepage
+	<%= url_field(:user, :homepage) %>
+	<br>
+	user-address
+	<%= email_field(:user, :address) %>
+	<br>
+	user-favorite_color
+	<%= color_field(:user, :favorite_color) %>
+	<br>
+	user-started_at
+	<%= time_field(:task, :started_at) %>
+	
+  	<br />
+  	<%= submit_tag("Search") %>
+
+  	
+<% end %>
